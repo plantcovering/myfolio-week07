@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이수현 — 나의 취향 아카이브</title>
+<meta name="description" content="따스한 분위기의 힐링을 좋아하는 사람">
+<meta property="og:type" content="website">
+<meta property="og:title" content="이수현 — 나의 취향 아카이브">
+<meta property="og:description" content="따스한 분위기의 힐링을 좋아하는 사람">
+<meta property="og:image" content="assets/space1_01.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400&family=Noto+Serif+KR:wght@400;600&family=IBM+Plex+Mono:wght@400;600&family=Nanum+Gothic+Coding:wght@400;700&family=Jua&family=Gowun+Dodum&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="my-style.css">
+</head>
+<body>
+
+<!-- 상단 고정 바 — 왼쪽 사이트 제목 · 오른쪽 장 메뉴 다섯 칸 -->
+<header class="ca-gnb">
+  <div class="ca-gnb-row">
+    <p class="ca-gnb-name"><a href="#top">이수현</a></p>
+    <nav class="ca-menu" aria-label="장">
+      <a href="#s2">Gaze</a>
+      <a href="#s3">People</a>
+      <a href="#s4">Spaces</a>
+      <a href="#s5">Objects</a>
+      <a href="#s6">Criteria</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ① 첫 화면 — 공간 1의 01번 사진 + 대표 제목(7주 관점 한 문장) -->
+<div class="ca-top ca-top--hero" id="top">
+  <figure class="ca-hero ca-hero--full"><img src="assets/space1_01.jpg" width="1040" height="1387" alt="첫 화면 LP 카페 사진 1"></figure>
+  <!-- 커스텀 2 — 따뜻한 빛 덮개 + 천천히 흔들리는 나뭇잎 그림자 (레퍼런스 핀 0–2초) -->
+  <div class="hx-light" aria-hidden="true"><div class="hx-leaves"><span></span><span></span></div><div class="hx-glow">
+    <svg class="hx-dapple" viewBox="0 0 1000 1000" preserveAspectRatio="none" focusable="false">
+      <defs>
+        <!-- 나뭇잎 사이로 드는 빛 조각: 잡음 → 문턱으로 조각 모양 → 가장자리 흐림 → 한쪽 파랑 · 반대쪽 주황 번짐 -->
+        <filter id="hx-dapple" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feTurbulence type="fractalNoise" baseFrequency="0.013 0.016" numOctaves="2" seed="11" result="n"/>
+          <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  9 0 0 0 -3.9" result="m"/>
+          <feGaussianBlur in="m" stdDeviation="7" result="mb"/>
+          <feOffset in="mb" dx="-6" dy="5" result="mo1"/>
+          <feFlood class="hx-f-a" result="fa"/><feComposite in="fa" in2="mo1" operator="in" result="ca"/>
+          <feOffset in="mb" dx="6" dy="-5" result="mo2"/>
+          <feFlood class="hx-f-b" result="fb"/><feComposite in="fb" in2="mo2" operator="in" result="cb"/>
+          <feFlood class="hx-f-w" result="fw"/><feComposite in="fw" in2="mb" operator="in" result="cw"/>
+          <feMerge><feMergeNode in="ca"/><feMergeNode in="cb"/><feMergeNode in="cw"/></feMerge>
+        </filter>
+      </defs>
+      <rect width="1000" height="1000" filter="url(#hx-dapple)"/>
+    </svg>
+  </div></div>
+  <div class="ca-hero-t">
+    <h1 class="ca-h1"><span class="hx-l1">오래 곁에 두고 매일 함께하는,</span> <span class="hx-l2">나만의 이야기가 담긴 물건들</span></h1>
+    <p class="hx-sub">따스한 분위기의 힐링을 좋아하는 사람</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ③ 1장 시선 — 4주 하늘·손·길 -->
+  <section class="ca-sec" id="s2" aria-labelledby="s2-t">
+    <div class="ca-head ca-row"><h2 class="ca-label" id="s2-t">1장 시선</h2>
+      <p class="ca-lead">고요한 곳에 빛이 여러 가지 색으로 우리의 눈에 들어오는 그 순간들을 모은다.</p>
+    </div>
+    <div class="ca-track">
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">하늘</button></h3>
+          <p class="ca-when">탁 트인 하늘에 햇빛이 비추어 시간에 따라 여러 가지 색들로 변하는 모습이 아름다웠다. 또한 이와 함께 구름에도 다른 색들이 표현되는 것을 좋아하여 선정하게 되었다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/w04_sky1.jpg" width="5184" height="3456" alt="1장 시선 하늘 사진 1"></figure>
+          <figure class="ca-fig"><img src="assets/w04_sky2.jpg" width="5760" height="3840" alt="1장 시선 하늘 사진 2"></figure>
+          <figure class="ca-fig"><img src="assets/w04_sky3.jpg" width="6000" height="4000" alt="1장 시선 하늘 사진 3"></figure>
+          <figure class="ca-fig"><img src="assets/w04_sky4.jpg" width="4993" height="3329" alt="1장 시선 하늘 사진 4"></figure>
+          <figure class="ca-fig"><img src="assets/w04_sky5.jpg" width="3000" height="2250" alt="1장 시선 하늘 사진 5"></figure>
+          <p class="ca-why">하늘 — 시간마다 빛의 색이 달라서 골랐다</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">손</button></h3>
+          <p class="ca-when">평온하고 고요한 곳에 있는 한 사람 손 위에 따스한 느낌을 주는 빛이 전체적으로 아름답다고 생각하여 이렇게 선정하게 되었다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/w04_hand1.jpg" width="2500" height="3125" alt="1장 시선 손 사진 1"></figure>
+          <figure class="ca-fig"><img src="assets/w04_hand2.jpg" width="3264" height="4928" alt="1장 시선 손 사진 2"></figure>
+          <figure class="ca-fig"><img src="assets/w04_hand3.jpg" width="4000" height="6000" alt="1장 시선 손 사진 3"></figure>
+          <figure class="ca-fig"><img src="assets/w04_hand4.jpg" width="4272" height="2848" alt="1장 시선 손 사진 4"></figure>
+          <figure class="ca-fig"><img src="assets/w04_hand5.jpg" width="5472" height="3648" alt="1장 시선 손 사진 5"></figure>
+          <p class="ca-why">손 — 손에 빛이 머물러서 골랐다</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">길</button></h3>
+          <p class="ca-when">해가 떠 있을 때와 달리 사람들이 없는 텅 빈 거리, 또한 아침에는 볼 수 없는 네온사인들과 어우러진 색 조합이 평소와 다른 특이한 점을 준다. 또한 흔히 볼 수 있지 않은 특정 거리에서만 볼 수 있는 광경이기 때문에 좋아한다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/w04_road1.jpg" width="5413" height="3609" alt="1장 시선 길 사진 1"></figure>
+          <figure class="ca-fig"><img src="assets/w04_road2.jpg" width="5999" height="3999" alt="1장 시선 길 사진 2"></figure>
+          <figure class="ca-fig"><img src="assets/w04_road3.jpg" width="3409" height="4261" alt="1장 시선 길 사진 3"></figure>
+          <figure class="ca-fig"><img src="assets/w04_road4.jpg" width="3634" height="4542" alt="1장 시선 길 사진 4"></figure>
+          <figure class="ca-fig"><img src="assets/w04_road5.jpg" width="4000" height="6000" alt="1장 시선 길 사진 5"></figure>
+          <p class="ca-why">길 — 밤에 볼 수 있는 빈 길 위로 색다른 색이 머물러 있어서 골랐다</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ④ 2장 사람 — 5주 호시노 겐 · 이유 셋 -->
+  <!-- 폰(≤768): 장이 멈춘 채 아래로 스크롤하면 카드가 옆으로 지나간다(shelf.js · data-move="phone"). 1280 은 그대로 -->
+  <section class="ca-sec ca-pieces" id="s3" aria-labelledby="s3-t" data-move="phone">
+   <div class="mv-track">
+   <div class="mv-pin">
+    <div class="ca-head ca-row"><h2 class="ca-label" id="s3-t">2장 호시노 겐</h2>
+      <p class="ca-lead">인기가 많아도 누구에게나 상냥한 사람</p>
+    </div>
+    <div class="mv-view">
+    <div class="ca-grid ca-row">
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">인기가 많아도 누구에게나 상냥하다</button></h3>
+          <p class="ca-when">2017년 1월 단독 라이브 뒤풀이에서 끝까지 남아 스태프 한 사람 한 사람과 악수하고 포옹하며 배웅했다는 기사를 읽었다</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/people_gen_blue.jpg" width="1473" height="2000" alt="2장 사람 인기가 많아도 누구에게나 상냥하다 사진 1"></figure>
+          <p class="ca-why">누구에게나 상냥한 사람이다</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">MIU404의 캐릭터</button></h3>
+          <p class="ca-when">드라마 MIU404에서 호시노 겐이 연기한 캐릭터를 봤다</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/people_miu404.png" width="376" height="510" alt="2장 사람 MIU404의 캐릭터 사진 1"></figure>
+          <p class="ca-why">그 캐릭터에 관심이 생겨 자연스럽게 호시노 겐도 좋아하게 되었다</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">恋를 작곡한 사람</button></h3>
+          <p class="ca-when">恋 같은 여러 유명한 노래를 작곡했다</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/w05_news_p1.jpg" width="1200" height="1799" alt="2장 사람 恋를 작곡한 사람 사진 1"></figure>
+          <p class="ca-why">개인적으로 좋아하는 곡이 많다</p>
+        </div>
+      </article>
+    </div>
+    </div>
+   </div>
+   </div>
+  </section>
+
+  <!-- ⑤ 3장 공간 — 6주 공간 셋(공간마다 사진 최대 6장) -->
+  <section class="ca-sec" id="s4" aria-labelledby="s4-t">
+    <div class="ca-head ca-row"><h2 class="ca-label" id="s4-t">3장 공간</h2>
+    </div>
+    <div class="ca-track" data-scatter>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">LP 카페</button></h3>
+          <p class="ca-when">각 테이블에 비치된 턴테이블로 원하는 LP판을 가져와 자신이 좋아하는 노래를 들으며 힐링할 수 있다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/space1_01.jpg" width="1040" height="1387" alt="3장 공간 LP 카페 사진 1"><figcaption>앞을 바라보았을 때 보이는 탁 트인 풍경</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space1_02.jpg" width="1400" height="1050" alt="3장 공간 LP 카페 사진 2"></figure>
+          <figure class="ca-fig"><img src="assets/space1_03.jpg" width="1400" height="1050" alt="3장 공간 LP 카페 사진 3"><figcaption>LP 카페 내부 모습</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space1_04.jpg" width="1400" height="1050" alt="3장 공간 LP 카페 사진 4"><figcaption>카페에서 시킨 음료와 LP판</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space1_05.jpg" width="1400" height="1050" alt="3장 공간 LP 카페 사진 5"><figcaption>음료와 턴테이블</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space1_06.jpg" width="1400" height="1050" alt="3장 공간 LP 카페 사진 6"><figcaption>턴테이블</figcaption></figure>
+          <p class="ca-why">조금 바쁜 일상에서 나와서 한가하게 지내고 싶을 때.
+그때 본 경치며, 감정들이 너무 좋아서</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">성산일출봉</button></h3>
+          <p class="ca-when">새벽에 일출을 보기 위해 정상에 올라간다</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/space2_01.jpg" width="1600" height="739" alt="3장 공간 성산일출봉 사진 1"><figcaption>새벽에 정상 가는 길</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space2_02.jpg" width="1600" height="901" alt="3장 공간 성산일출봉 사진 2"></figure>
+          <figure class="ca-fig"><img src="assets/space2_03.jpg" width="1400" height="1050" alt="3장 공간 성산일출봉 사진 3"><figcaption>하산하며 내려다본 풍경</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space2_04.jpg" width="1400" height="1050" alt="3장 공간 성산일출봉 사진 4"></figure>
+          <figure class="ca-fig"><img src="assets/space2_05.jpg" width="1050" height="1400" alt="3장 공간 성산일출봉 사진 5"></figure>
+          <figure class="ca-fig"><img src="assets/space2_06.jpg" width="1400" height="1050" alt="3장 공간 성산일출봉 사진 6"></figure>
+          <p class="ca-why">정상에 도착하여 해가 뜨는 그 순간에
+친구들과 함께 새벽에 이야기 나누면서 일출을 봤던 경험을 다시 느껴보고 싶어서</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">티 클래스</button></h3>
+          <p class="ca-when">여러 가지 차를 마셔보며, 전문적으로 차의 맛과 향기 그리고 우리는 방법을 알아보고 자신에게 맞는 차를 찾아보는 경험을 한다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/space3_01.jpg" width="1400" height="1050" alt="3장 공간 티 클래스 사진 1"><figcaption>홍차</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space3_02.jpg" width="1400" height="1050" alt="3장 공간 티 클래스 사진 2"></figure>
+          <figure class="ca-fig"><img src="assets/space3_03.jpg" width="1400" height="1050" alt="3장 공간 티 클래스 사진 3"><figcaption>격불한 말차</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space3_04.jpg" width="1400" height="1050" alt="3장 공간 티 클래스 사진 4"></figure>
+          <figure class="ca-fig"><img src="assets/space3_05.jpg" width="1400" height="1050" alt="3장 공간 티 클래스 사진 5"><figcaption>세작 녹차</figcaption></figure>
+          <figure class="ca-fig"><img src="assets/space3_06.jpg" width="1400" height="1050" alt="3장 공간 티 클래스 사진 6"><figcaption>다과와 호지차</figcaption></figure>
+          <p class="ca-why">좋은 찻잎으로 한 번에 여러 가지 차를 맛보고 싶을 때.
+가르쳐주는 선생님께서 매우 잘 알려주시고, 전문적인 지식을 가지고 올바른 방법으로 우리기 때문에 평소에 맛볼 수 없는 차의 풍부한 맛을 맛볼 수 있어서</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ⑥ 4장 물건 — 7주 인터뷰 · 물건 다섯 -->
+  <!-- 커스텀 4 — 왼쪽 판(장 이름, 오른쪽 아래) | 카드 줄(3장 보이고 넷째가 걸침). 아래로 스크롤하면 화면이 멈춘 채 카드가 옆으로 지나간다(shelf.js) -->
+  <section class="ca-sec ca-shelf" id="s5" aria-labelledby="s5-t" data-move="all">
+   <div class="ca-shelf-track mv-track">
+   <div class="ca-shelf-pin mv-pin">
+    <div class="ca-head"><h2 class="ca-label" id="s5-t">4장 물건</h2>
+      <p class="ca-lead">내 옆에 항상 머무는 것들</p>
+    </div>
+    <div class="ca-shelf-view mv-view">
+    <span class="ca-shelf-arrow" aria-hidden="true">→</span>
+    <div class="ca-grid">
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">동그란 안경</button></h3>
+          <p class="ca-when">세상을 선명하게 보기 위해 매일 함께한다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/obj1_01.jpg" width="1050" height="1400" alt="4장 물건 동그란 안경 사진 1"></figure>
+          <p class="ca-why">지금 가장 나에게 잘 맞는 안경이어서</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">고려청자 에어팟</button></h3>
+          <p class="ca-when">아침을 음악과 상쾌하게 보내기 위해 매일 함께한다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/obj2_01.jpg" width="1050" height="1400" alt="4장 물건 고려청자 에어팟 사진 1"></figure>
+          <p class="ca-why">디자인이 마음에 들고, 무엇보다 오래 써 와서</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">대용량 보조배터리</button></h3>
+          <p class="ca-when">실외에서 휴대폰 배터리가 없을 때 충전하기 위해 매일 함께한다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/obj3_01.jpg" width="1050" height="1400" alt="4장 물건 대용량 보조배터리 사진 1"></figure>
+          <p class="ca-why">고속 충전이 가능하고, 무엇보다 용량이 많아서</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">화분 인형</button></h3>
+          <p class="ca-when">예상치 못한 특별한 곳에서 사진을 찍기 위해 매일 함께한다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/obj4_01.jpg" width="1050" height="1400" alt="4장 물건 화분 인형 사진 1"></figure>
+          <p class="ca-why">친구가 생일날 직접 만들어준 물건이어서</p>
+        </div>
+      </article>
+      <article class="ca-card">
+        <div class="ca-cap"><h3 class="ca-name"><button class="ca-open" type="button">카드 케이스</button></h3>
+          <p class="ca-when">가끔씩 명함들을 넣기 위해 매일 함께한다.</p>
+        </div>
+        <div class="ca-body">
+          <figure class="ca-fig"><img src="assets/obj5_01.jpg" width="1050" height="1400" alt="4장 물건 카드 케이스 사진 1"></figure>
+          <p class="ca-why">오랫동안 사용해왔고, 좋아하는 캐릭터 스티커를 붙여놓아서</p>
+        </div>
+      </article>
+    </div>
+    </div>
+   </div>
+   </div>
+  </section>
+
+  <!-- ⑦ 기준이 쌓이는 자리 — 장 키워드별 기준 한 줄 + 호불호. 공간(6주 기준)은 기록 없음, 물건(7주 기준)은 회고 뒤 채움 -->
+  <section class="ca-sec" id="s6" aria-labelledby="s6-t">
+    <div class="ca-head ca-row"><h2 class="ca-label" id="s6-t">기준이 쌓이는 자리</h2></div>
+    <dl class="ca-rows">
+      <div class="ca-r ca-row"><dt>시선</dt><dd>고요한 곳에 빛이 여러 가지 색으로 우리의 눈에 들어오는 그 순간들을 모은다.</dd></div>
+      <div class="ca-r ca-row"><dt>사람</dt><dd>인기가 많아도 누구에게나 상냥한 사람</dd></div>
+      <!-- 물건 · 7주 기준 한 줄 [회고 뒤 채움] -->
+      <div class="ca-r ca-row"><dt>호불호</dt><dd>쫓기듯 바쁘게 움직여야 하는 곳 · 금방 못 쓰게 되는 물건</dd></div>
+    </dl>
+  </section>
+</main>
+
+<!-- 하단 고정 바 — Email · Instagram 칸은 공개 주소라 기본으로 지움(주제카드 07주) -->
+<footer class="ca-bar-b">
+  <p class="ca-gnb-c" lang="en">©2026</p>
+</footer>
+
+<script src="sig.js"></script>
+<script src="hero-light.js"></script>
+<script src="shelf.js"></script>
+</body>
+</html>
